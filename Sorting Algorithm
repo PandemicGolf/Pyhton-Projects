@@ -1,0 +1,21 @@
+# Define our function and the length, -1 is all the way.
+def bubble_sort(list):
+    length = len(list) -1
+    sorted = False
+# Run until sorted
+    while not sorted:
+        # Break loop when all are sorted
+        sorted = True
+
+# Run for all values in the list
+        for i in range(0, length):
+            #If items in list to the left are greater in value to items on right of list, then list is not sorted
+            if list[i] > list[i+1]:
+                sorted = False
+                list[i], list[i+1] = list[i+1], list[i]
+
+    return list
+books = ["The Catcher in the Rye", "To Kill a Mockingbird", "The Great Gatsby", "The Grapes of Wrath",
+ "The Lord of the Rings", "The Hitchhiker's Guide to the Galaxy", "The Alchemist", "The Picture of Dorian Gray", "The Bible", "The Little Prince"]
+
+print(bubble_sort(books))
